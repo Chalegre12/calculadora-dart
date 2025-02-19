@@ -7,18 +7,18 @@ void main() {
   print('Digite o segundo número:');
   double num2 = double.parse(stdin.readLineSync()!);
 
-  print('Escolha a operação (+, -, *, /):');
+  print("Escolha a operação (adição: + | subtração: - | multiplicação: * | divisão: /):");
   String operacao = stdin.readLineSync()!;
 
-  double resultado = (operacao == '+') 
+  double resultado = (operacao == "+") 
       ? num1 + num2 
-      : (operacao == '-') 
+      : (operacao == "-") 
       ? num1 - num2 
-      : (operacao == '*') 
+      : (operacao == "*") 
       ? num1 * num2 
-      : (operacao == '/' && num2 != 0) 
+      : (operacao == "/" && num2 != 0) 
       ? num1 / num2 
-      : throw Exception('Operação inválida ou divisão por zero');
+      : throw Exception("Operação inválida ou divisão por zero");
 
-  print('O resultado é: $resultado');
+  print("O resultado é: $resultado");
 }
